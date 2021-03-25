@@ -1,5 +1,1 @@
-print("Hello")
-print("siema")
-print("\n")
-print("asd")
-print("yo yo")
+print("to jest test z pushem")
