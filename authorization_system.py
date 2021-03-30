@@ -78,3 +78,23 @@ class Authenticator:
         if bool(self.is_logged):
             return 1
         return 0
+
+class Authorizor:
+
+    def __init__(self, authenticator):
+        self.permissions = {}
+        self.authenticator = authenticator
+
+    def add_permission(self,permission):
+        if self.permissions.get(permission) != None:
+            self.permissions[permission] = set()
+        else:
+            raise PermissionError
+
+    def permit_user(self, uname, permission):
+        if self.permissions:
+            pass #dokończ, czy istnieje uprawnienie
+                    #czy istnieje taki użytkownik w uprawnieniu
+
+    def check_permision(self):
+        pass
